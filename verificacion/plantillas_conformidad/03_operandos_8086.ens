@@ -1,0 +1,24 @@
+; Plantilla de conformidad: tamaños, operandos y direccionamiento 8086.
+.stack segment
+    dw 12 dup(0)
+ends
+
+.data segment
+    byteValue db 40
+    wordValue dw 400
+    palabras dw 2 dup(0)
+ends
+
+.code segment
+revision:
+    and al, byteValue
+    adc ax, wordValue
+    and al, bl
+    adc ax, bx
+    pop wordValue
+    idiv byteValue
+    int 021H
+    lea di, [bp+si+2]
+    les dx, DWORD PTR [bx+si]
+    jb revision
+ends

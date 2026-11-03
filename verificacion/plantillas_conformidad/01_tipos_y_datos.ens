@@ -1,0 +1,32 @@
+; Plantilla de conformidad: tipos de datos e instrucciones asignadas.
+.stack segment
+    dw 16 dup(0)
+ends
+
+.data segment
+    mensaje db 'OK'
+    datoByte db 25
+    datoWord dw -300
+    vectorB db 3 dup('A')
+    vectorW dw 2 dup(1)
+    puntero dw 2 dup(0)
+    limite equ 65535
+ends
+
+.code segment
+inicio:
+    cbw
+    clc
+    lodsb
+    lodsw
+    stosb
+    aaa
+    pop ax
+    idiv datoByte
+    int 021H
+    and al, datoByte
+    adc ax, datoWord
+    lea si, [bx+di]
+    les ax, DWORD PTR [bx]
+    jnz inicio
+ends

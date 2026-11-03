@@ -1,0 +1,31 @@
+; Ejemplo 5: fuente extensa para probar las páginas de código y de elementos
+.data segment
+valor01 db 1
+valor02 db 2
+valor03 db 3
+valor04 db 4
+valor05 db 5
+valor06 db 6
+valor07 db 7
+valor08 db 8
+valor09 db 9
+valor10 db 10
+valor11 db 11
+valor12 db 12
+.code segment
+inicio:
+    mov ax, 1
+    mov ax, 2
+    mov ax, 3
+    mov ax, 4
+    mov ax, 5
+    mov ax, 6
+    mov ax, 7
+    mov ax, 8
+    mov ax, 9
+    mov ax, 10
+    mov ax, 11
+    mov ax, 12
+    mov ax, 13
+    mov ax, 14
+    mov ax, 15

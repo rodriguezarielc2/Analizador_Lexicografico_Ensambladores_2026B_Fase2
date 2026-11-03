@@ -1,0 +1,11 @@
+; Ejemplo 1: elementos básicos para la demostración
+.data segment
+mensaje db "Hola; ensambladores$" ; el punto y coma dentro de la cadena se conserva
+letra db 'A'
+contador dw 25
+.code segment
+inicio:
+    mov ax, 25       ; MOV no está asignado al equipo 2: se muestra como símbolo
+    cbw              ; instrucción asignada al equipo 2
+    int 021h
+    ret              ; RET no está asignado al equipo 2: se muestra como símbolo

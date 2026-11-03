@@ -1,0 +1,15 @@
+; Ejemplo 2: compuestos, constantes y separadores
+.data segment
+relleno db 4 dup('A')
+tabla dw 3 dup(0)
+numdec db 42
+numhex db 0FFh
+numbin db 10101010b
+numword dw 0002AH
+caracter db 'Z'
+texto db "A, B; C$"
+.code segment
+inicio:
+    mov al, byte ptr [bx + si]
+    mov ax, word ptr [bp + 4]
+    and al, 00Fh

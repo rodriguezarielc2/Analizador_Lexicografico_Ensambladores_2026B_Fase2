@@ -1,0 +1,22 @@
+; Equipo 2 - Fase 1
+; Los mnemónicos no incluidos se clasifican como símbolos.
+CBW
+CLC
+LODSB
+LODSW
+STOSB
+AAA
+POP
+IDIV
+INT
+AND
+ADC
+LEA
+LES
+JNZ
+JZ
+LOOPNZ
+JGE
+JNA
+JNL
+JB

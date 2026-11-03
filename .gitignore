@@ -1,0 +1,17 @@
+# Ejecutable local para run.bat; el ejecutable de entrega viaja dentro del ZIP.
+build/
+*.exe
+*.pdb
+
+# Notas internas de planeación no necesarias para compilar ni usar el proyecto.
+/docs/superpowers/
+
+# Copias locales de programas ASM del usuario, usadas solo para revisión manual.
+/verificacion/ejemplos/Plantilla_Asm.ens
+/verificacion/ejemplos/Explorador_Basico_Archivos.ens
+/verificacion/ejemplos/Programa2_Comparacion_De_Cadenas.ens
+
+# Configuración local del editor
+.vs/
+*.user
+*.suo

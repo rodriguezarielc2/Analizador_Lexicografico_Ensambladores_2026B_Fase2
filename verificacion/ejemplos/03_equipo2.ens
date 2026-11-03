@@ -1,0 +1,27 @@
+; Ejemplo 3: las instrucciones asignadas al equipo 2
+.code segment
+inicio:
+    cbw
+    clc
+    lodsb
+    lodsw
+    stosb
+    aaa
+    pop ax
+    idiv bx
+    int 021h
+    and al, 00Fh
+    adc ax, 1
+    lea si, dato
+    les bx, destino
+    jnz continuar
+    jz terminar
+    loopnz ciclo
+    jge mayor_ig
+    jna no_mayor
+    jnl no_menor
+    jb menor
+; Estos mnemónicos no están asignados al equipo 2 y deben ser símbolos.
+    mov ax, bx
+    add ax, 1
+    ret

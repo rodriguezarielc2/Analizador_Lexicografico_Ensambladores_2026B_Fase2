@@ -1,0 +1,22 @@
+; Ejemplo 4: errores intencionales para demostrar la identificación negativa
+.data segment
+; Número mal formado: elemento inválido
+valor db 123XYZ
+; Dígito no válido para binario: elemento inválido
+binario db 102b
+; Cadena sin cierre: elemento inválido
+sin_cierre db "texto
+; Corchete sin cierre: elemento inválido
+arreglo db [bx + si
+; Carácter no reconocido: elemento no identificado
+signo db ^
+; Nombre mayor que diez caracteres y nombre con inicio numerico
+abcdefghijk db 0
+7tecla db 0
+; Segmento incompleto y directiva ajena al catalogo
+.data
+.model small
+; Los elementos pegados se conservan completos
+dw 10 dupy(0)
+mov msg[2], 45H
+dw dup(0)resto

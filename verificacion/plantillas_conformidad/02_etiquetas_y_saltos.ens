@@ -1,0 +1,21 @@
+; Plantilla de conformidad: etiquetas previas y transferencias del Equipo 2.
+.stack segment
+    dw 8 dup(0)
+ends
+
+.data segment
+    contador db 3
+    umbral dw 20
+ends
+
+.code segment
+entrada:
+    clc
+    jz entrada
+    jnz entrada
+    loopnz entrada
+    jge entrada
+    jna entrada
+    jnl entrada
+    jb entrada
+ends
